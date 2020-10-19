@@ -1,6 +1,6 @@
 package engine
 
-import "github.com/jordanbrauer/go-ecs/ecs"
+import "github.com/jordanbrauer/hallucinator/pkg/ecs"
 
 // Abort handles an error by checking for a nil value and panicing otherwise.
 func Abort(caught error) {

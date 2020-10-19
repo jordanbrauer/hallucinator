@@ -1,7 +1,7 @@
 package engine
 
 import (
-	"github.com/jordanbrauer/go-ecs/ecs"
+	"github.com/jordanbrauer/hallucinator/pkg/ecs"
 	"github.com/veandco/go-sdl2/sdl"
 )
 

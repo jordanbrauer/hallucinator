@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/jordanbrauer/go-ecs/ecs"
-	"github.com/jordanbrauer/go-ecs/engine"
+	"github.com/jordanbrauer/hallucinator/pkg/ecs"
+	"github.com/jordanbrauer/hallucinator/pkg/engine"
 	"github.com/veandco/go-sdl2/sdl"
 )
 
@@ -20,8 +20,8 @@ func init() {
 	engine.Pixels()
 	engine.Debug(true)
 
-	var tilemap = engine.LoadTexture("./kenney_microroguelike_1.2/Tilemap/colored_tilemap_packed.png")
-	var font = engine.LoadFont("./JetBrainsMono-Regular.ttf", 14)
+	var tilemap = engine.LoadTexture("./assets/colored_tilemap_packed.png")
+	var font = engine.LoadFont("./assets/JetBrainsMono-Regular.ttf", 14)
 	var rigidBody string = ecs.RigidBody{}.Name()
 	var gravity string = ecs.Gravity{}.Name()
 	var transform string = ecs.Transform{}.Name()
