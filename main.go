@@ -3,7 +3,6 @@ package main
 import (
 	"math"
 	"math/rand"
-	"time"
 
 	"github.com/jordanbrauer/hallucinator/pkg/ecs"
 	"github.com/jordanbrauer/hallucinator/pkg/engine"
@@ -15,9 +14,8 @@ var windowHeight int32 = 640
 var windowWidth int32 = 800
 
 func init() {
-	rand.Seed(time.Now().UnixNano())
 	engine.Init("GoLang Graphics Engine", windowWidth, windowHeight)
-	engine.Pixels()
+	// engine.Pixels()
 	engine.Debug(true)
 
 	var tilemap = engine.LoadTexture("./assets/colored_tilemap_packed.png")

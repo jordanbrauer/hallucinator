@@ -2,6 +2,7 @@ package engine
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
 	"time"
 
@@ -57,6 +58,7 @@ func Init(name string, width, height int32) {
 	keyboard = sdl.GetKeyboardState()
 	world = ecs.CreateWorld()
 
+	rand.Seed(time.Now().UnixNano())
 	fmt.Println("Finished initializing subsystems")
 }
 
