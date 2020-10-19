@@ -86,6 +86,21 @@ func main() {
 }
 ```
 
+Executing it like so,
+
+```bash
+$ go run main.go
+```
+
+should yield you the following output
+
+```
+Finished initializing subsystems
+Hello World!
+Cleaning up resources...
+Done!
+```
+
 ### Setup & Initialization
 
 Initializing a new program is simple!
