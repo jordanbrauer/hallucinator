@@ -48,6 +48,44 @@ The following language(s) & libraries are requried to be installed on the host m
 
 ## Usage
 
+Below describes the usage of the library, and how you can use it to lay the foundation to do whatever you want!
+
+### Hello World!
+
+Here is the "Hello World!" Hallucinator program. You can use this as a skeleton or jumping off point.
+
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+
+	"github.com/jordanbrauer/hallucinator/pkg/ecs"
+	"github.com/jordanbrauer/hallucinator/pkg/engine"
+)
+
+func init() {
+	engine.Init("Hello World!", 1200, 1024)
+	engine.Debug(true)
+	engine.Setup(func(world ecs.World) bool {
+		return true
+	})
+	engine.Teardown(func(world ecs.World) bool {
+		return true
+	})
+}
+
+func main() {
+	engine.Run(func(world ecs.World) bool {
+		fmt.Println("Hello World!")
+		time.Sleep(3 * time.Second)
+
+		return false
+	})
+}
+```
+
 ### Setup & Initialization
 
 Initializing a new program is simple!
