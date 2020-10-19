@@ -213,3 +213,17 @@ This should be done from within the `engine.Run` closure defined in the `main` e
 ```go
 world.Update(MySystem{}.Name(), dt) // note that `dt` is received as argument in the closure
 ```
+
+### Included Components
+
+The following components are included as a set of "batteries included". They are not required to be used, but they offer some basic and common types used for graphical programs (e.g., games).
+
+- `VectorFloat32`
+- `Acceleration`
+- `Colour`
+- `Dimensions`
+- `Gravity`
+- `Position`
+- `RigidBody`
+- `Rotation`
+- `Transform`
