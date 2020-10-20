@@ -125,7 +125,7 @@ func handleEvents() bool {
 		case *sdl.QuitEvent:
 			running = false
 
-			fmt.Println("Received shutdown event!")
+			fmt.Println("\nReceived shutdown event!")
 
 			break
 		}
