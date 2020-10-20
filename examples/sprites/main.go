@@ -68,10 +68,7 @@ func main() {
 
 		var fps = engine.FramesPerSecond()
 		var debug = fmt.Sprintf("FPS: %d | Frame Elapsed: %f | Entities: %d", fps.Count, fps.Elapsed, world.Entities())
-		texture = engine.TexturizeString(
-			font,
-			debug,
-		)
+		texture = engine.TexturizeString(font, debug)
 		var _, _, width, height, err = texture.Query()
 
 		engine.Abort(err)
@@ -87,7 +84,7 @@ func main() {
 }
 
 // ============================================================================
-// Systems
+// Components
 // ============================================================================
 
 type sprite struct {
